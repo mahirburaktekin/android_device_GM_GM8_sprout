@@ -25,7 +25,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # GMS
-WITH_GMS := true
+TARGET_USES_NANO_GAPPS := true
 $(call inherit-product, vendor/gms/products/gms.mk)
 
 PRODUCT_BRAND := GM
@@ -33,6 +33,10 @@ PRODUCT_DEVICE := GM8_sprout
 PRODUCT_MANUFACTURER := General Mobile
 PRODUCT_NAME := lineage_GM8_sprout
 PRODUCT_MODEL := GM 8
+
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-gm
 TARGET_VENDOR := gm
